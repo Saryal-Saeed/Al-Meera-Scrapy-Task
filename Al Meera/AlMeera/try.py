@@ -49,13 +49,13 @@ class AlmeeraSpider(scrapy.Spider):
             item_title = product.css('your_item_title_css_selector::text').get()
             item_image_url = product.css('your_item_image_css_selector::attr(src)').get()
             item_price = product.css('your_item_price_css_selector::text').get()
-            item_barcode = product.css('your_item_barcode_css_selector::text').get()
+            
 
             product_data = {
                 "ItemTitle": item_title,
                 "ItemImageURL": item_image_url,
                 "ItemPrice": item_price,
-                "ItemBarcode": item_barcode
+               
             }
             products.append(product_data)
 
